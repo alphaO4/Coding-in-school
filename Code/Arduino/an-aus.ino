@@ -12,4 +12,3 @@ void loop()
   digitalWrite (LED, HIGH);}
   else (sonsorwert < 0)
   {digitalWrite (LED, LOW);}
-  
