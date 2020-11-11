@@ -207,7 +207,7 @@ void loop() {
     if ( digitalRead(PIR2) == HIGH ) { dir = "DOWN"; }
     // if one of them has been triggered, choose a random animation function to go to
     if ( dir != "" ) {
-      // J's Birthday (My son, who is helping me with this Code)
+      // J's Birthday (My son)
       if ( currenttime > 1531778400 && currenttime < 1531864799 ) {
       // M's Birthday (My daughter)
       if ( currenttime > 1537903800 && currenttime < 1537999199 ) {
