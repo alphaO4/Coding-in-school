@@ -11,4 +11,4 @@ void loop()
  if {(sensorwert = 0)
   digitalWrite (LED, HIGH);}
   else (sonsorwert < 0)
-  {digitalWrite (LED, LOW);}
+  {digitalWrite (LED, LOW);}  {digitalWrite (LED, LOW);} 
