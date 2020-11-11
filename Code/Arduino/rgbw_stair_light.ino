@@ -97,6 +97,7 @@ void ISRwatchdog() {
   if (watchdogCount == 360) {
     Serial.println();
     Serial.println("the watchdog bites!!!");
+    Serial.println("restarting now");
     ESP.restart();
   }
 
@@ -182,6 +183,7 @@ void setup() {
   
   strip.setBrightness(BRIGHTNESS);
   strip.begin(); // prepare the data pin for NeoPixel output
+  Serial.println("All pixels should now be off");
   setAll(0,0,0,0);
   strip.show(); // Initialize all pixels to 'off'
 
