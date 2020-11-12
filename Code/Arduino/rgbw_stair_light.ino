@@ -28,7 +28,7 @@
 #include <Adafruit_NeoPixel.h>
 #include <time.h>
 #include <ESP8266WiFi.h>
-#include <WiFiClient.h>  // do we need this?
+//#include <WiFiClient.h> do we need this?  No we don’t!
 #include <ESP8266WiFiMulti.h>
 #include <ESP8266HTTPClient.h>
 #include <ESP8266httpUpdate.h>
