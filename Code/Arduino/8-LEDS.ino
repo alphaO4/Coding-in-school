@@ -12,14 +12,14 @@ int dwiscool=0;
 int helligkeit=0;
 
 void setup(){
-pinMode(LED1, OUTPUT)
-pinMode(LED2, OUTPUT)
-pinMode(LED3, OUTPUT)
-pinMode(LED4, OUTPUT)
-pinMode(LED5, OUTPUT)
-pinMode(LED6, OUTPUT)
-pinMode(LED7, OUTPUT)
-pinMode(LED8, OUTPUT)
+pinMode(LED1, OUTPUT);
+pinMode(LED2, OUTPUT);
+pinMode(LED3, OUTPUT);
+pinMode(LED4, OUTPUT);
+pinMode(LED5, OUTPUT);
+pinMode(LED6, OUTPUT);
+pinMode(LED7, OUTPUT);
+pinMode(LED8, OUTPUT);
 }
 
 void loop(){
