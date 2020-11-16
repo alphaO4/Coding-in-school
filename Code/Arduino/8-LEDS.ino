@@ -27,9 +27,4 @@ dwiscool = 1023/255;
 Sensorwert = analogRead(eingang) /dwiscool;
 analogWrite(helligkeit, 255);
 helligkeit = Sensorwert;
-
-
-
-
-
 }
