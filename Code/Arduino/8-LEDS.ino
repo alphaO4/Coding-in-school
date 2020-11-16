@@ -24,10 +24,10 @@ pinMode(LED8, OUTPUT)
 
 void loop(){
 dwiscool = 1023/255; 
-sensorwert = analogRead(eingang)/dwiscool;
-sensorwert = analogRead(eingang);
+Sensorwert = analogRead(eingang)/dwiscool;
+Sensorwert = analogRead(eingang);
 analogWrite(LED, helligkeit);
-helligkeit = sensorwert;
+helligkeit = Sensorwert;
 
 
 
