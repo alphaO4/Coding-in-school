@@ -6,7 +6,7 @@ int LED5=7;
 int LED6=6;
 int LED7=5;
 int LED8=4;
-int Eingang=A0;
+int eingang=A0;
 int Sensorwert=0;
 int dwiscool=0;
 int helligkeit=0;
@@ -23,7 +23,7 @@ pinMode(LED8, OUTPUT);
 }
 
 void loop(){
-dwiscool = 1023/255; 
+dwiscool = 1023/8; 
 Sensorwert = analogRead(eingang) /dwiscool;
 helligkeit + Sensorwert;
 analogWrite(helligkeit, 255);
