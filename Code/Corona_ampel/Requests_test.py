@@ -18,7 +18,6 @@ print("Coronazahlen vom: " + str(spl_word), "\n")
 r = requests.get('https://www.berlin.de/lageso/gesundheit/infektionsepidemiologie-infektionsschutz/corona/tabelle-indikatoren-gesamtuebersicht/index.php/index/today.json')
 
 print(r.json()['index'][0], "\n")  # print the latest info in the terminal.
-#print("")
 
 # 7 tage inzidenz abfragen
 tage = float(r.json()['index'][0]['7_tage_inzidenz'])
