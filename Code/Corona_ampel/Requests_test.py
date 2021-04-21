@@ -83,7 +83,7 @@ if float(r.json()['index'][index]['4_tage_r_wert_berlin_rki']) != 0:
         Ampel3.amber.off()
 
  
- time.sleep(10000)
+ time.sleep(100)
 
 
 
