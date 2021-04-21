@@ -2,6 +2,7 @@ from gpiozero import TrafficLights
 import json
 import requests
 from datetime import date, timedelta         #Time is important
+import time
 
 Ampel1 = TrafficLights(2, 3, 4) #ampel eins defenieren
 
@@ -73,7 +74,7 @@ if float(r.json()['index'][index]['4_tage_r_wert_berlin_rki']) != 0:
     elif 1.1 <= rWert <= 1.2:
         print("4_tage_r_wert_berlin_rki -", float(r.json()['index'][index]['4_tage_r_wert_berlin_rki']), "- GELB","\n")
         Ampel2.red.off()
-        Ampel2.green.off()
+        Ampel2git .green.off()
         Ampel2.amber.on()
     elif rWert <= 1.0:
         print("4_tage_r_wert_berlin_rki -", float(r.json()['index'][index]['4_tage_r_wert_berlin_rki']), "- GRÜN","\n")
@@ -82,7 +83,7 @@ if float(r.json()['index'][index]['4_tage_r_wert_berlin_rki']) != 0:
         Ampel3.amber.off()
 
  
- 
+ time.sleep(10000)
 
 
 
