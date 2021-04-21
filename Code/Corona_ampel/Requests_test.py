@@ -5,9 +5,9 @@ from datetime import date, timedelta         #Time is important
 
 Ampel1 = TrafficLights(2, 3, 4) #ampel eins defenieren
 
-Ampel2 = TrafficLights(17, 22, 27)  # ampel zwei defenieren
+Ampel2 = TrafficLights(17,27,22)  # ampel zwei defenieren
 
-Ampel3 = TrafficLights(10, 11, 8)  # ampel drei defenieren
+Ampel3 = TrafficLights(13, 19, 26)  # ampel drei defenieren
 
 # Get the date from yesterday, so the printout is more organiesd even after a long time of running.
 yesterday = date.today() - timedelta(days=1)
