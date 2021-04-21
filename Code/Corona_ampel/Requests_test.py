@@ -67,14 +67,14 @@ if float(r.json()['index'][index]['4_tage_r_wert_berlin_rki']) != 0:
     rWert = float(r.json()['index'][index]['4_tage_r_wert_berlin_rki'])
     if rWert >= 1.2:
         print("4_tage_r_wert_berlin_rki -", float(r.json()['index'][index]['4_tage_r_wert_berlin_rki']), "- ROT","\n")
-        Ampel3.red.on()
-        Ampel3.green.off()
-        Ampel3.amber.off()
+        Ampel1.red.on()
+        Ampel1.green.off()
+        Ampel1.amber.off()
     elif 1.1 <= rWert <= 1.2:
         print("4_tage_r_wert_berlin_rki -", float(r.json()['index'][index]['4_tage_r_wert_berlin_rki']), "- GELB","\n")
-        Ampel3.red.off()
-        Ampel3.green.off()
-        Ampel3.amber.on()
+        Ampel2.red.off()
+        Ampel2.green.off()
+        Ampel2.amber.on()
     elif rWert <= 1.0:
         print("4_tage_r_wert_berlin_rki -", float(r.json()['index'][index]['4_tage_r_wert_berlin_rki']), "- GRÜN","\n")
         Ampel3.red.off()
