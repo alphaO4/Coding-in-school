@@ -4,11 +4,11 @@ import requests
 from datetime import date, timedelta         #Time is important
 import time
 
-Ampel1 = TrafficLights(3, 2, 4) #ampel eins defenieren
+Ampel1 = TrafficLights(4, 3, 2) #ampel eins defenieren
 
-Ampel2 = TrafficLights(27,17,22)  # ampel zwei defenieren
+Ampel2 = TrafficLights(22 ,27,17)  # ampel zwei defenieren
 
-Ampel3 = TrafficLights(19, 13, 26)  # ampel drei defenieren
+Ampel3 = TrafficLights(26, 19, 13)  # ampel drei defenieren
 
 # Get the date from yesterday, so the printout is more organiesd even after a long time of running.
 yesterday = date.today() - timedelta(days=1)
@@ -83,7 +83,7 @@ if float(r.json()['index'][index]['4_tage_r_wert_berlin_rki']) != 0:
         Ampel3.amber.off()
 
  
-time.sleep(100)
+#time.sleep(100)
 
 
 
