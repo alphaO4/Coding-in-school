@@ -11,14 +11,18 @@ Ampel2 = TrafficLights(22 ,27,17)  # ampel zwei defenieren
 Ampel3 = TrafficLights(26, 19, 13)  # ampel drei defenieren
 
 # Get the date from yesterday, so the printout is more organiesd even after a long time of running.
-yesterday = date.today() - timedelta(days=1)
-spl_word = yesterday                        #
-print("Coronazahlen vom: " + str(spl_word), "\n")
 
 # get the API data.
 r = requests.get('https://www.berlin.de/lageso/gesundheit/infektionsepidemiologie-infektionsschutz/corona/tabelle-indikatoren-gesamtuebersicht/index.php/index/today.json')
 
+print("Daten abgefragt: " + datetime.now().strftime('%Y-%m-%d %H:%M:%S'), "\n") # Get the date for the Request, so the printout is more organiesd even after a longer time of running.
+
+print(r.json()['index'][0]['datum']) #Get the date from the Actual Date
+
 print(r.json()['index'][0], "\n")  # print the latest info in the terminal.
+
+print(r.json()['index'][0], "\n")  # print the latest info in the terminal.
+
 
 # 7 tage inzidenz abfragen
 tage = float(r.json()['index'][0]['7_tage_inzidenz'])
@@ -74,7 +78,7 @@ if float(r.json()['index'][index]['4_tage_r_wert_berlin_rki']) != 0:
     elif 1.1 <= rWert <= 1.2:
         print("4_tage_r_wert_berlin_rki -", float(r.json()['index'][index]['4_tage_r_wert_berlin_rki']), "- GELB","\n")
         Ampel2.red.off()
-        Ampel2git .green.off()
+        Ampel2 .green.off()
         Ampel2.amber.on()
     elif rWert <= 1.0:
         print("4_tage_r_wert_berlin_rki -", float(r.json()['index'][index]['4_tage_r_wert_berlin_rki']), "- GRÜN","\n")
