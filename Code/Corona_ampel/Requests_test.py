@@ -4,7 +4,7 @@ import requests
 from datetime import date, timedelta, datetime  # Time is important
 import logging
 from apscheduler.schedulers.blocking import BlockingScheduler
-
+from gpiozero import TrafficLights
 Ampel1 = TrafficLights(4, 3, 2) #ampel eins defenieren
 
 Ampel2 = TrafficLights(22 ,27,17)  # ampel zwei defenieren
