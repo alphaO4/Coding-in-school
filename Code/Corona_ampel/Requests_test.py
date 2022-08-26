@@ -33,7 +33,7 @@ def Corona_ampel():
         logging.info(data) 
         print("7_tage_inzidenz -", float(r.json()['index'][0]['7_tage_inzidenz']), "- ROT", "\n")
         Ampel1.red.on()
-        Ampel1.green.off()
+        Ampel1.green.off() 
         Ampel1.amber.off()
     elif 20 <= tage <= 30:  # wenn unter 30
         data = ("7_tage_inzidenz -", float(r.json()['index'][0]['7_tage_inzidenz']), "- GELB")
@@ -110,6 +110,8 @@ def Corona_ampel():
     print("----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------")
     print("")
     logging.info("--------------------------------------------------------------------------------------------------------------------------------------------------")
+
+Corona_ampel()
 
 scheduler = BlockingScheduler()
 scheduler.add_job(Corona_ampel, 'cron', hour=19)
